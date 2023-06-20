@@ -1,0 +1,600 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** end reset css**/
+body {
+	
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+	background-color: #FFFEF8;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+section {
+	margin: 50px 0
+}
+
+h1{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1 > span {
+	font-family: 'Work Sans';
+	font-size:10px;
+	letter-spacing: 0.1em;
+;
+}
+
+h2{
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+}
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+li:hover {
+	color: #B1663C;
+}
+#introduction {
+	display: flex;
+	align-items: center;
+}
+#introduction figure {
+	flex: 1
+}
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+#introduction article {
+	flex: 1
+}
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+#portfolio h2 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+
+}
+#contact {
+	width: 50%;
+margin: auto;
+}
+#contact > * {
+	text-align: center;
+
+}
+#contact h2{
+	margin-bottom: 20px;
+}
+#contact form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em
+}
+
+
+/* CSS GENERAL */
+
+header {
+	max-width: 1140px;
+	margin: auto;
+	margin-top: 50px;
+}
+
+main {
+	max-width: 1140px;
+	margin: auto;
+}
+
+footer {
+	height: 60px;
+	display: flex;
+	justify-content: end;
+	bottom: 0px;
+	background-color: white;
+	width: 100%;
+}
+
+.footer-login {
+	height: 60px;
+	display: flex;
+	justify-content: end;
+	background-color: white;
+	width: 100%;
+}
+
+
+/* BOUTONS FILTRER */
+
+.boutons-categorie {
+	width: fit-content;
+	margin: auto;
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: space-around;
+	
+}
+
+.boutons-categorie button {
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 16px;
+	color: #1D6154;
+	background-color: #FFFEF8;
+	border: 1px solid #1D6154;
+	border-radius: 60px;
+	padding: 9px 20px;
+	margin: 0 5px;
+
+}
+
+.boutons-categorie button:hover {
+	background-color: #1D6154;
+	color: white;
+}
+
+.bouton-indiv:active,
+.bouton-indiv:focus {
+	background-color: #1D6154;
+	color: white;
+}
+
+
+/* MODAL */
+
+.modal {
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 59px;
+	background-color: black;
+	z-index: 9999;
+  }
+  
+.modal-content {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+  }
+
+.modal-content button {
+	border-style: none;
+	font-size: 16px;
+  }
+
+.edit_button {
+	display: flex;
+	align-items: center;
+	background-color: black;
+	color: white;
+  }
+
+.edit_button p{
+	margin: auto 0 auto 9px;
+	height: 25px;
+	padding-top: 11px;
+  }
+
+.publish_button_modal {
+	height: 38px;
+	width: 216px;
+	background-color: white;
+	color: black;
+	border-radius: 60px;
+	font-weight: 500;
+	margin-left: 21px;
+  }
+
+
+
+/* GALERIE MODAL */
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 50;
+	display: none;
+}
+	  
+.overlay-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 630px;
+	height: 731px;
+	background-color: white;
+	z-index: 100;
+  }
+
+.close-button {
+	margin-left: 92%;
+	margin-top: 30px;
+	margin-bottom: 16px;
+	border: none;
+	background-color: white;
+}
+
+.overlay-content h3 {
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 26px;
+	line-height: 30px;
+	text-align: center;
+	color: #000000;
+	margin-bottom: 26px;
+}
+	  
+.edit-galerie {
+	width: 460px;
+	height: 450px;
+	border-bottom: 1px solid #B3B3B3;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	margin: auto;
+	padding-left: 40px;
+	display: flex;
+  flex-wrap: wrap;
+	
+}
+
+.edit-galerie-item button {
+	border: none;
+	background-color: rgba(255, 255, 255, 0);
+}
+
+.edit-galerie-item {
+	width: 20%;
+}
+
+.edit-galerie-card {
+	width: 77px; 
+	height: 108px; 
+	margin-left: 3px; 
+	margin-right: 3px; 
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: flex-end;
+	padding: 6px;
+  }
+
+  .edit-galerie-card button {
+	width: 17px;
+	height: 17px;
+	padding: 0;
+	border: none;
+	background-color: #000000;
+	border-radius: 2px;
+	margin-left: 3px;
+  }
+
+  .edit-galerie-card button svg{
+	width: 11px;
+	height: 11px;
+  }
+
+	  
+.modal-button-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.publish_button {
+	background-color: #1D6154;
+	color: white;
+	margin: auto;
+	height: 38px;
+	width: 216px;
+	border-radius: 60px;
+	font-weight: 500;
+	border: none;
+	margin-top: 38px;
+	margin-bottom: 23px;
+  }
+	  
+.delete_button {
+	border: none;
+	background-color: white;
+	color: #D65353;
+	font-size: 14px;
+  }
+
+
+/*   AJOUT PHOTO OVERLAY */
+.overlay-add {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 630px;
+	height: 670px;
+	background-color: white;
+	z-index: 100;
+	display: none;
+}
+
+.backNext {
+	display: flex;
+
+	padding-left: 30px;
+	padding-right: 45px;
+}
+
+.back-button {
+	border: none;
+	background-color: #00000000;
+}
+
+.overlay-add h3 {
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 26px;
+	line-height: 30px;
+	text-align: center;
+	color: #000000;
+	margin-bottom: 36px;
+}
+
+.uploadForm {
+	display: flex;
+	flex-direction: column;
+	width: 420px;
+	margin: auto;
+}
+
+#photoInput {
+	display: none;
+}
+
+.photoInputDiv {
+	height: 169px;
+	background-color: #E8F1F6;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.photoInputDiv svg {
+	margin-top: 28px;
+	margin-bottom: 21px;
+}
+
+.photoInputDiv button {
+	border: none;
+	background-color: #CBD6DC;
+	color: #306685;
+	font-size: 14px;
+	border-radius: 50px;
+	padding: 10px 33px;
+	margin-bottom: 7px;
+}
+
+.photoInputDiv p {
+	font-size: 10px;
+	color: #444444;
+}
+
+.uploadForm input {
+	margin: 10px 0px 21px 0px;
+	height: 51px;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.uploadForm select {
+	margin: 10px 0px 21px 0px;
+	height: 51px;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.addButtonDiv {
+	width: 100%;
+	margin-top: 26px;
+	border-top: 1px solid #B3B3B3;
+	padding-top: 32px;
+	display: flex;
+	justify-content: center;
+}
+
+.addButtonDiv button {
+	border: none;
+	border-radius: 60px;
+	background-color: #A7A7A7;
+	color: white;
+	font-size: 14px;
+	font-weight: 700;
+	padding: auto;
+	width: 237px;
+	height: 36px;
+}
+
+
+	  
+ 
+/* PAGE LOGIN */
+
+.main-login {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 379px;
+	margin: auto;
+	margin-top: 150px;
+}
+
+.main-login h2 {
+	margin-bottom: 37px;
+}
+
+.info {
+	margin-bottom: 30px;
+}
+
+.info p {
+	margin-bottom: 7px;
+	font-size: 14px;
+	font-weight: 500;
+	color: #3D3D3D;
+	;
+}
+
+.info input {
+	width: 379px;
+	height: 45px;
+}
+
+.main-login button {
+	width: 179px;
+	height: 36px;
+	background-color: #1D6154;
+	border-style: none;
+	border-radius: 60px;
+	color: white;
+	font-size: 14px;
+	font-weight: 700;
+	font-family: 'Syne';
+	margin-bottom: 28px;
+}
+
+.main-login a {
+	color: #3D3D3D;
+	font-weight: 500;
+	margin-bottom: 355px;
+}
+
+.form-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
