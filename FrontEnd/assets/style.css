@@ -46,6 +46,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+button {
+	cursor: pointer;
+}
+
 /** end reset css**/
 body {
 	
@@ -99,6 +104,16 @@ nav li {
 li:hover {
 	color: #B1663C;
 }
+
+nav li a {
+	text-decoration: none;
+	color: #000000;
+}
+
+nav li a:hover {
+	color: #B1663C;
+}
+
 #introduction {
 	display: flex;
 	align-items: center;
@@ -351,15 +366,13 @@ footer {
 }
 	  
 .edit-galerie {
-	width: 460px;
+	width: 473px;
 	height: 450px;
 	border-bottom: 1px solid #B3B3B3;
 	overflow-y: auto;
-	scrollbar-width: thin;
 	margin: auto;
-	padding-left: 40px;
 	display: flex;
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 	
 }
 
@@ -369,14 +382,14 @@ footer {
 }
 
 .edit-galerie-item {
-	width: 20%;
+	width: fit-content;
+	margin: 0 4px 12px 0;
+	height: fit-content;
 }
 
 .edit-galerie-card {
-	width: 77px; 
+	width: 75px; 
 	height: 108px; 
-	margin-left: 3px; 
-	margin-right: 3px; 
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: flex;
@@ -441,7 +454,6 @@ footer {
 
 .backNext {
 	display: flex;
-
 	padding-left: 30px;
 	padding-right: 45px;
 }
@@ -476,18 +488,28 @@ footer {
 .photoInputDiv {
 	height: 169px;
 	background-color: #E8F1F6;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+.photoInputDiv img {
+	object-fit: contain;
+}
+
+
+.photoInputMain {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-bottom: 30px;
 }
 
-.photoInputDiv svg {
+.photoInputMain svg {
 	margin-top: 28px;
 	margin-bottom: 21px;
 }
 
-.photoInputDiv button {
+.photoInputMain button {
 	border: none;
 	background-color: #CBD6DC;
 	color: #306685;
@@ -497,7 +519,7 @@ footer {
 	margin-bottom: 7px;
 }
 
-.photoInputDiv p {
+.photoInputMain p {
 	font-size: 10px;
 	color: #444444;
 }
@@ -507,6 +529,7 @@ footer {
 	height: 51px;
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	padding-left: 16px;
 }
 
 .uploadForm select {
@@ -514,6 +537,8 @@ footer {
 	height: 51px;
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	padding-left: 16px;
+	width: 100%;
 }
 
 .addButtonDiv {
@@ -532,10 +557,11 @@ footer {
 	color: white;
 	font-size: 14px;
 	font-weight: 700;
-	padding: auto;
 	width: 237px;
 	height: 36px;
 }
+
+
 
 
 	  
