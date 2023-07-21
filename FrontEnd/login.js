@@ -8,26 +8,29 @@ document.getElementById("button").addEventListener("click", function() {
     password: password
   };
 
-  var xhr = new XMLHttpRequest();
-
-  xhr.open("POST", "http://localhost:5678/api/users/login");
-  xhr.setRequestHeader("Content-Type", "application/json");
-
-  xhr.onload = function() {
-    if (xhr.status === 200) {
-      var response = JSON.parse(xhr.responseText);
+  fetch("http://localhost:5678/api/users/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error("Erreur : " + response.status);
+      }
+    })
+    .then(response => {
       if (response.token) {
         localStorage.setItem("token", response.token);
         console.log("Token enregistré :", response.token);
         window.location.href = "index.html";
       }
-    } else {
-      var errorResponse = JSON.parse(xhr.responseText);
-      console.error("Erreur :", errorResponse.message);
+    })
+    .catch(error => {
+      console.error("Erreur :", error);
       alert("Utilisateur non reconnu !");
-    }
-  };
-
-  // Envoyer la requête avec les données d'identification de l'utilisateur
-  xhr.send(JSON.stringify(data));
+    });
 });
